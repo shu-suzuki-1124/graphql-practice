@@ -9,9 +9,9 @@ module Types
 
     # TODO: remove me
     field :test_field, String, null: false,
-      description: "An example field added by the generator"
+      description: "An update example field added by the generator"
     def test_field
-      "Hello World!"
+      "Hello World! Update!!!"
     end
   end
 end
