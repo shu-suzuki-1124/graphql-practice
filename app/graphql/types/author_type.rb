@@ -11,5 +11,6 @@ class Types::AuthorType < Types::BaseObject
 
   field :full_name, String, null: true
 
-  field :coorinates, Types::CoordinatesType, null: false
+  field :coordinates, Types::CoordinatesType, null: false
+  field :publication_years, [Int], null: false
 end
