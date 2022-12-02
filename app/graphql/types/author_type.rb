@@ -14,3 +14,13 @@ class Types::AuthorType < Types::BaseObject
   field :coordinates, Types::CoordinatesType, null: false
   field :publication_years, [Int], null: false
 end
+
+class Types::AuthorInputType < GraphQL::Schema::InputObject
+  graphql_name "AuthorInputType"
+  description "All the attrivute needed to create author"
+
+  argument :first_name, String, required: false
+  argument :last_name, String, required: false
+  argument :yob, Int, required: false
+  argument :is_alive, Boolean, required: true
+end
