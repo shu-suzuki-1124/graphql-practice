@@ -17,8 +17,9 @@ end
 
 class Types::AuthorInputType < GraphQL::Schema::InputObject
   graphql_name "AuthorInputType"
-  description "All the attrivute needed to create author"
+  description "All the attrivute needed to create/update author"
 
+  argument :id, ID, required: false
   argument :first_name, String, required: false
   argument :last_name, String, required: false
   argument :yob, Int, required: false
