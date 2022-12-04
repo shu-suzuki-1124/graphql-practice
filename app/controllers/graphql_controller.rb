@@ -13,7 +13,8 @@ class GraphqlController < ApplicationController
     Rails.logger.info("Logged in as #{session&.user&.email}")
 
     context = {
-      current_user: session&.user
+      current_user: session&.user,
+      session_id: session&.id
       # time: Time.now
       # Query context goes here, for example:
       # current_user: current_user,
